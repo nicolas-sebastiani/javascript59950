@@ -76,4 +76,45 @@
 //     console.log(`El numero ${userNumber} NO es un numero primo.`)
 // }
 
-let hora = 7
+// let hora = 21
+// if (hora >= 6 && hora <= 11) {
+//     console.log(`Es de mañana`)
+// }
+// else if (hora >= 12 && hora <= 18) {
+//     console.log(`Es de tarde`)
+// }
+// else if (hora >= 19 && hora <= 23) {
+//     console.log(`Es de noche`)
+// }
+// else if (hora >= 0 && hora <= 5) {
+//     console.log(`Es de noche`)
+// }
+
+// let numero1 = prompt('Ingrese el primer numero: ')
+// let numero2 = prompt('Ingrese el segundo numero: ')
+// 2
+// if (numero1 % numero2 == 0) {
+//     console.log(`El numero ${numero1} es divisible por el numero ${numero2}.`)
+// }
+// else {
+//     console.log(`El numero ${numero1} NO es divisible por el numero ${numero2}.`)
+// }
+
+// let nombreDeUsuario = 'Nico';
+// let caracteres = nombreDeUsuario.length;
+// if (caracteres > 6) {
+//     console.log(`El nombre usuario tiene mas de 6 caracteres.`)
+// }
+// else {
+//     console.log('El nombre de usuario no tiene mas de 6 caracteres.')
+// }
+
+// let year = parseInt(prompt('Ingrese un año: '))
+
+// if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+//     console.log(`El año ${year} es bisiesto.`)
+// }
+// else {
+//     console.log(`El año ${year} NO es bisiesto.`)
+// }
+
