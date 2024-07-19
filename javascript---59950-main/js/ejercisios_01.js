@@ -68,20 +68,20 @@
 // let age = year - parseInt(yearBorn)
 // console.log('You are ' + age + ' years old.')
 
-// let month = prompt('Insert the mouth when you born: ')
-// switch(month) {
-//     case 'january':
-//         console.log('Your sign is piscis.')
-//     case 'february':
-//         console.log('Your sign is libra.')
-//     case 'march':
-//         console.log('Your sign is virgo.')
-//     case 'april':
-//         console.log('Your sign is acuario.')
-//     case 'june':
-//         console.log('Your sign is scorpio.')
-//     case 'july':
-//         console.log('Your sign is capricornio.')
-//     case 'august':
-//         console.log('Your sign is leo.')
-// }
+let month = prompt('Insert the mouth when you born: ').toLowerCase()
+switch(month) {
+    case 'january':
+        console.log('Your sign is piscis.')
+    case 'february':
+        console.log('Your sign is libra.')
+    case 'march':
+        console.log('Your sign is virgo.')
+    case 'april':
+        console.log('Your sign is acuario.')
+    case 'june':
+        console.log('Your sign is scorpio.')
+    case 'july':
+        console.log('Your sign is capricornio.')
+    case 'august':
+        console.log('Your sign is leo.')
+}
