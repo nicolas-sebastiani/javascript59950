@@ -139,5 +139,79 @@
 //     }
 // }
 
-// 21 a 
+// 21 a 25
+
+// for (i = 1; i <= 20; i++) {
+//     if (i % 5 == 0){
+//         continue
+//     } else {
+//         console.log(i)
+//     }
+// }
+
+// let i = 0
+// while (i <= 14) {
+//     i++
+//     if (i % 3 === 0){
+//         continue
+//     }
+//     console.log(i)
+// }
+
+// let i = 1
+// let userNumber = 0
+// do {
+//     userNumber = parseInt(prompt('Ingrese un numero: '))
+//     if (userNumber % 2 == 0){
+//         continue
+//     }
+//     console.log(userNumber)
+// } while (userNumber > 0) 
+
+// for (i = 1; i <= 10; i++) {
+//     if (i % 7 == 0){
+//         continue
+//     } else {
+//         console.log(i)
+//     }
+// }
+
+// let i = 0
+// while (i <= 18) {
+//     i+=2
+//     console.log(i)
+// }
+
+// 26 a 
+
+// let userNumber = prompt('Ingrese un numero del 1 al 7: ')
+// switch (userNumber) {
+//     case "1" :
+//         console.log('Lunes')
+//         break
+//     case "2" :
+//         console.log('Martes')
+//         break
+//     case "3":
+//         console.log('Miercoles')
+//         break
+//     case "4" :
+//         console.log('Jueves')
+//         break
+//     case "5" :
+//         console.log('Viernes')
+//         break
+//     case "6" :
+//         console.log('Sabado')
+//         break
+//     case "7" :
+//         console.log('Domingo')
+//         break
+//     case "0" :
+//         console.log('Numero 0 no es valido')
+//         break
+//     default:
+//         console.log('Ingrese un numero del 1 al 7')
+//         break
+// }
 
