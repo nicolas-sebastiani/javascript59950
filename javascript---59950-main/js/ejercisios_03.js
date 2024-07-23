@@ -182,7 +182,7 @@
 //     console.log(i)
 // }
 
-// 26 a 
+// 26 a 30
 
 // let userNumber = prompt('Ingrese un numero del 1 al 7: ')
 // switch (userNumber) {
@@ -215,3 +215,171 @@
 //         break
 // }
 
+// let userPrompt = prompt('Ingrese una calificacion de la A a la F: ').toLocaleUpperCase();
+// switch(userPrompt){
+//     case 'A':
+//         console.log('La nota es exelente.');
+//         break;
+//     case 'B':
+//         console.log('La nota es mmuy buena.');
+//         break;
+//     case 'C':
+//         console.log('La nota es satisfactoria.');
+//         break;
+//     case 'D':
+//         console.log('La nota es pesima.');
+//         break;
+//     default:
+//         console.log('Ingrese una letra.');
+//         break;
+// }
+
+// let userPrompt = parseInt(prompt('Ingrese 1 para el primer mensaje, 2 para el segundo, 3 para el tercero: '))
+// switch(userPrompt){
+//     case 1:
+//         console.log('Mensaje 1');
+//         break;
+//     case 2:
+//         console.log('Mensaje 2');
+//         break;
+//     case 3:
+//         console.log('Mensaje 3');
+//         break;
+// }
+
+// let userNumber = prompt('Ingrese un numero del 1 al 12: ')
+// switch (userNumber) {
+//     case "1" :
+//         console.log('Verano')
+//         break
+//     case "2" :
+//         console.log('Verano')
+//         break
+//     case "3":
+//         console.log('Verano')
+//         break
+//     case "4" :
+//         console.log('Otoño')
+//         break
+//     case "5" :
+//         console.log('Otoño')
+//         break
+//     case "6" :
+//         console.log('Otoño')
+//         break
+//     case "7" :
+//         console.log('Invierno')
+//         break
+//     case "8" :
+//         console.log('Invierno')
+//         break
+//     case "9" :
+//         console.log('Verano')
+//         break
+//     case "10" :
+//         console.log('Verano')
+//         break
+//     case "11" :
+//         console.log('Verano')
+//         break
+//     case "12" :
+//         console.log('Verano')
+//         break
+//     default:
+//         console.log('Ingrese un numero del 1 al 12')
+//         break
+// }
+
+// let userPrompt = prompt('Ingrese un numero del 1 al 12: ').toLocaleLowerCase()
+// switch (userPrompt) {
+//     case "a" :
+//         console.log(`La letra ${userPrompt} es vocal.`)
+//         break
+//     case "e" :
+//         console.log(`La letra ${userPrompt} es vocal.`)
+//         break
+//     case "i":
+//         console.log(`La letra ${userPrompt} es vocal.`)
+//         break
+//     case "o" :
+//         console.log(`La letra ${userPrompt} es vocal.`)
+//         break
+//     case "u" :
+//         console.log(`La letra ${userPrompt} es vocal.`)
+//         break
+//     default:
+//         console.log(`La letra ${userPrompt} es consonante.`)
+//         break
+// }
+
+// 31 a 35
+
+// let resultado = 0
+// let userNumber = 0
+// for (let i = 0; i < 5; i++){
+//     userNumber = parseInt(prompt('Ingrese un numero: '))
+//     resultado += userNumber
+// }
+// console.log(resultado)
+
+// let userPrompt = ''
+// while (userPrompt != 'salir'){
+//     userPrompt = prompt('Ingrese una palabra cualquiera').toLowerCase()
+// }
+
+// for (let i = 0; i <= 50; i++){
+//     if (i % 4 === 0) {
+//         continue
+//     }
+//     console.log(i)
+// }
+
+// let userNumber = 0
+// while (userNumber < 100){
+//     userNumber = parseInt(prompt('Ingrese un numero cualquiera: '))
+// }
+
+// let userNumber = prompt('Ingrese un numero del 1 al 12: ')
+// switch (userNumber) {
+//     case "1" :
+//         console.log('Enero')
+//         break
+//     case "2" :
+//         console.log('febrero')
+//         break
+//     case "3":
+//         console.log('marzo')
+//         break
+//     case "4" :
+//         console.log('abril')
+//         break
+//     case "5" :
+//         console.log('mayo')
+//         break
+//     case "6" :
+//         console.log('junio')
+//         break
+//     case "7" :
+//         console.log('julio')
+//         break
+//     case "8" :
+//         console.log('agosto')
+//         break
+//     case "9" :
+//         console.log('septiembre')
+//         break
+//     case "10" :
+//         console.log('octubre')
+//         break
+//     case "11" :
+//         console.log('noviembre')
+//         break
+//     case "12" :
+//         console.log('diciembre')
+//         break
+//     default:
+//         console.log('Ingrese un numero del 1 al 12')
+//         break
+// }
+
+// 36 a 
