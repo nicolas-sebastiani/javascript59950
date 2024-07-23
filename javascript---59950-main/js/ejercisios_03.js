@@ -382,4 +382,156 @@
 //         break
 // }
 
-// 36 a 
+// 36 a 40
+
+// for (let i = 10; i >= 1; i--){
+//     console.log(i)
+// }
+
+// let i = 11
+// while (i >= 2){
+//     i--
+//     console.log(i)
+// }
+
+// let i = 4
+// do {
+//     i++
+//     console.log(i)
+// } while (i <= 14)
+
+// let arrayInverso = [1,2,3,4,5,6,7,8]
+// for (i = arrayInverso.length; i >= 0; i--){
+//     console.log(arrayInverso[i])
+// }
+
+// let i = 0
+// while (i <= 100){
+//     i++
+//     console.log(i)
+//     if (i % 25 === 0){
+//         break
+//     }
+// }
+
+// 41 a 45
+
+// let userNumber = 0
+// for (let i = 1; i <= 1; i++){
+//     userNumber = parseInt(prompt("Ingrese un numero: "))
+//     switch(userNumber){
+//         case 1:
+//             console.log('mensaje 1')
+//             break
+//         case 2:
+//             console.log('mensaje 2')
+//             break
+//         case 3:
+//             console.log('mensaje 3')
+//             break
+//         case 4:
+//             console.log('mensaje 4')
+//             break
+//         case 5:
+//             console.log('mensaje 5')
+//             break
+//         default:
+//             console.log('ingrese un numero')
+//     }
+// }
+
+// let userNumber = 0
+// let i = 1
+// while (i <= 1) {
+//     i++
+//     userNumber = parseInt(prompt("Ingrese un numero del 1 al 7: "))
+//     switch(userNumber){
+//         case 1:
+//             console.log('lunes')
+//             break
+//         case 2:
+//             console.log('martes')
+//             break
+//         case 3:
+//             console.log('miercoles')
+//             break
+//         case 4:
+//             console.log('jueves')
+//             break
+//         case 5:
+//             console.log('viernes')
+//             break
+//         case 6:
+//             console.log('sabado')
+//             break
+//         case 7:
+//             console.log('domingo')
+//             break
+//         default:
+//             console.log('ingrese un numero.')
+//     }
+// }
+
+// let i = 1
+// let userPrompt = ""
+// do {
+//     i++
+//     userPrompt = prompt("Ingrese una letra: ").toUpperCase()
+//     switch(userPrompt){
+//         case "a":
+//             console.log(`la letra ${userPrompt} es una vocal`)
+//             break
+//         case "e":
+//             console.log(`la letra ${userPrompt} es una vocal`)
+//             break
+//         case "i":
+//             console.log(`la letra ${userPrompt} es una vocal`)
+//             break
+//         case "o":
+//             console.log(`la letra ${userPrompt} es una vocal`)
+//             break
+//         case "u":
+//             console.log(`la letra ${userPrompt} es una vocal`)
+//             break
+//         default:
+//             console.log(`la letra ${userPrompt} es una consonante`)
+//             break
+//     }
+// } while (i <= 1)
+
+// for (let i = 0; i <= 20; i++){
+//     switch(i % 4){
+//         case 0:
+//             console.log(`el numero ${i} es divisible por 4`);
+//             break;
+//         default:
+//             console.log(i)
+//             break
+//     }
+// }
+
+// let i = 1
+// let userPrompt = ""
+// while (i <= 1) {
+//     i++
+//     userPrompt = prompt("Ingrese una calificacion de la A a la F: ").toUpperCase()
+//     switch(userPrompt){
+//         case 'A':
+//             console.log(`la calificacion es exelente`)
+//             break
+//         case 'B':
+//             console.log(`la calificacion es muy buena`)
+//             break
+//         case 'C':
+//             console.log(`la calificacion es buena`)
+//             break
+//         case 'D':
+//             console.log(`la calificacion es satisfactoria`)
+//             break
+//         case 'F':
+//             console.log(`la calificacion es mala`)
+//             break
+//         default:
+//             console.log('Ingrese una calificacion de la A a la F')
+//     }
+// }
