@@ -535,3 +535,88 @@
 //             console.log('Ingrese una calificacion de la A a la F')
 //     }
 // }
+
+// 46 a 
+
+// for (let i = 0; i <= 100; i++){
+//     if (i % 10 === 0){
+//         continue
+//     }
+//     console.log(i)
+// }
+
+// let esPrimo = true
+// let userNumber = 0
+// let i = 0;
+// while (esPrimo){
+//     userNumber = parseInt(prompt('Ingrese un numero: '))
+//     if (userNumber > 1) {
+//         for (let i = 2; i < userNumber; i++) {
+//             if (userNumber % i === 0) {
+//             esPrimo = false;
+//             break;
+//             }
+//         }
+//     }
+// }
+
+// let userAge = 0
+// let i = 0
+// do {
+//     userAge = parseInt(prompt("Ingrese su edad: "))
+//     if (userAge != 0){
+//         switch(true){
+//             case (userAge > 1 && userAge < 10):
+//                 console.log(`Tenes ${userAge} años y sos un niño.`)
+//                 break
+//             case (userAge > 10 && userAge < 20):
+//                 console.log(`Tenes ${userAge} años y sos un adolesente.`)
+//                 break
+//             case (userAge > 20 && userAge < 30):
+//                 console.log(`Tenes ${userAge} años y sos un adulto.`)
+//                 break
+//             case (userAge > 40 && userAge < 50):
+//                 console.log(`Tenes ${userAge} años y sos un adulto mayor.`)
+//                 break
+//             default:
+//                 console.log('Ingrese edad.')
+//                 break
+//         }
+//     }
+// } while (userAge != 0)
+
+// for (let i = 2; i <= 20; i++){
+//     console.log(i)
+//     if(Math.sqrt(i) % 1 === 0 ){
+//         console.log(`${i} es un cuadrado perfecto`)
+//         break
+//     }
+// }
+
+// let userNumber = 0;
+// while (userNumber < 7){
+//     userNumber = parseInt(prompt("Ingrese un dia de la semana en numero: "))
+//     switch(true){
+//         case (userNumber == 1):
+//             console.log('Es lunes.');
+//             break;
+//         case (userNumber == 2):
+//             console.log('Es martes.');
+//             break;
+//         case (userNumber == 3):
+//             console.log('Es miercoles.');
+//             break;
+//         case (userNumber == 4):
+//             console.log('Es jueves.');
+//             break;
+//         case (userNumber == 5):
+//             console.log('Es viernes.');
+//             break;
+//         case (userNumber == 6):
+//             console.log('Es sabado.');
+//             break;
+//         case (userNumber == 7):
+//             console.log('Es domingo.');
+//             break;
+//     }
+// }
