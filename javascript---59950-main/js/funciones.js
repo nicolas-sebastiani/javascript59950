@@ -40,7 +40,7 @@
 // enviarMensajeConParametros("Mensaje distinto, otra vez", "Mensaje 2 distinto, otra vez");
 
 // let resultado = 0; // Es una Variable Global
-// // console.log(resultado)
+// console.log(resultado)
 // function sumar(numero1, numero2) {
 //     resultado = numero1 + numero2;    
 // }
