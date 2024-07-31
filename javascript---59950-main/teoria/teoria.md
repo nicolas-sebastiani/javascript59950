@@ -138,7 +138,7 @@ function Persona(nombre, edad) {
 
 const persona1 = new Persona('Juan', 25);
 console.log(persona1.nombre); // Juan
-console.log(persona1.edad);   // 25
+console.log(persona1.edad);  // 25
 ```
 
 En este ejemplo, `Persona` es un constructor que inicializa los objetos con propiedades `nombre` y `edad`.

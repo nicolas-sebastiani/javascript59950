@@ -41,7 +41,7 @@
 
 20. Crea una clase llamada `Producto` con las propiedades `nombre`, `precio` y `cantidad`. Crea un objeto nuevo utilizando el operador `new` y la clase `Producto`.
 21. Crea una clase llamada `Estudiante` con las propiedades `nombre`, `edad` y `curso`. Crea un objeto nuevo utilizando el operador `new` y la clase `Estudiante`.
-22. Crea una clase llamada `Libro` con las propiedades `titulo`, `autor` y `año`. Crea un objeto nuevo utilizando el operador `new` y la clase `Libro`.
+22. Crea una clase llamada `Libro` con lasño propiedades `titulo`, `autor` y `año`. Crea un objeto nuevo utilizando el operador `new` y la clase `Libro`.
 
 ## Métodos y Operaciones con Objetos
 
@@ -64,7 +64,6 @@
 
 
 Aquí tienes 20 ejercicios adicionales siguiendo la misma lógica y nivel de complejidad:
-
 
 
 ### Métodos y Operaciones con Objetos
