@@ -99,6 +99,14 @@
 // agenda.agregarContacto('luz')
 // console.log(agenda)
 
+// const agenda = {
+//     contactos : ['nico', 'ale'],
+//     buscarContacto: function(nombre){
+//         const resultado = this.contactos.find((elemento) => elemento === nombre);
+//         console.log(resultado)
+//     }
+// }
+// agenda.buscarContacto('nico')
 
 // 15 a 16
 
@@ -128,9 +136,13 @@
 //     calcularArea(){
 //         return this.base * this.altura;
 //     }
+//     calcularPerimetro(){
+//         return (this.base * 2) + (this.altura * 2)
+//     }
 // }
 // const rectangulo1 = new Rectangulo (10,25)
 // console.log(rectangulo1.calcularArea())
+// console.log(rectangulo1.calcularPerimetro())
 
 // class Circulo{
 //     constructor(radio){
@@ -191,4 +203,213 @@
 // const libro1 = new Libro('cafe', 'jk rowling', 1990)
 // console.log(libro1.autor)
 
-// 
+// 24 a 28
+
+// class Vehiculo{
+//     constructor(marca, modelo, año){
+//         this.marca = marca;
+//         this.modelo = modelo;
+//         this.año = año;
+//     }
+//     detalles(){
+//         console.log(`Marca: ${this.marca} Modelo: ${this.modelo} Año: ${this.año}`)
+//     }
+//     acelerar(){
+//         console.log('El vehiculo esta acelerando.')
+//     }
+
+// }
+// const vehiculo1 = new Vehiculo ('peugeot', 208, 2016)
+// vehiculo1.detalles()
+// vehiculo1.acelerar()
+
+// class Triangulo{
+//     constructor (lado1, lado2, lado3){
+//         this.lado1 = lado1;
+//         this.lado2 = lado2;
+//         this.lado3 = lado3;
+//     }
+//     calcularArea(){
+//         return (this.lado1 + this.lado2 + this.lado3) / 2
+//     }
+//     calcularPerimetro(){
+//         return this.lado1 + this.lado2 + this.lado3
+//     }
+// }
+// const traingulo1 = new Triangulo(5,4,6)
+// console.log(traingulo1.calcularArea())
+
+// 29 a 32
+
+// const computadora = {
+//     marca: 'razer',
+//     modelo: 'gtx5k',
+//     procesador: 'intel i9'
+// }
+// console.log('procesador' in computadora)
+// for (let propiedad in computadora){
+//     console.log(propiedad)
+// }
+
+// class Circulo{
+//     constructor(radio){
+//         this.radio = radio;
+//     }
+//     calcularArea(){
+//         return 3.14 * radio * radio
+//     }
+// }
+
+// class TriagunloEquilatero{
+//     constructor(lado){
+//         this.lado = lado
+//     }
+//     calcularPerimetro(){
+//         return lado * 3
+//     }
+// }
+
+// 33 a 36
+
+// const libro = {
+//     titulo: 'harry potter',
+//     autor: 'jw rowling',
+//     paginas: 800,
+//     leerPagina: function(){
+//         console.log('Leyendo pagina...')
+//     }
+// }
+// libro.leerPagina()
+
+// const televisor = {
+//     marca: 'samsung',
+//     pulgadas: 32,
+//     resolucion: '1440p',
+//     encender: function(){
+//         console.log('El televisor esta encendido')
+//     }
+// }
+// televisor.encender()
+
+// const computadora = {
+//     marca: 'razer',
+//     modelo: 'gtx5k',
+//     procesador: 'intel i9',
+//     encender: function(){
+//         console.log('La computadora esta encendida')
+//     }
+// }
+// computadora.encender()
+
+// const celular = {
+//     marca: 'nokia',
+//     modelo: '1100',
+//     bateria: '5000w',
+//     llamar: function(numero){
+//         console.log(`Llamando a ${numero}`)
+//     }
+// }
+// celular.llamar(3364376358)
+
+// 37 a 40
+
+// const animal = {
+//     especie: 'felino',
+//     nombre: 'gato',
+//     edad: 8,
+// }
+// console.log('nombre' in animal)
+// for (let propiedad in animal){
+//     console.log(propiedad + ': ' + animal[propiedad])
+// }
+
+// const persona = {
+//     nombre: 'nico',
+//     apellido: 'sebastiani',
+//     edad: 33,
+// }
+// console.log('apellido' in persona)
+// for (let propiedad in persona){
+//     console.log(propiedad + ': ' + persona[propiedad])
+// }
+
+// 41 a 44
+
+// class Telefono {
+//     constructor(marca, modelo){
+//         this.marca = marca;
+//         this.modelo = modelo;
+//     }
+//     hacerLlamada(){
+//         console.log('Llamando...')
+//     }
+// }
+
+// class Laptop {
+//     constructor(marca, modelo, ram){
+//         this.marca = marca;
+//         this.modelo = modelo;
+//         this.ram = ram;
+//     }
+//     encender(){
+//         console.log('La laptop esta encendida.')
+//     }
+// }
+
+// class Tablet {
+//     constructor(marca, modelo, pantalla){
+//         this.marca = marca;
+//         this.modelo = modelo;
+//         this.pantalla = pantalla;
+//     }
+//     navegarInternet(){
+//         console.log('Navegando en internet')
+//     }
+// }
+
+// class SmartWatch {
+//     constructor(marca, modelo, bateria){
+//         this.marca = marca;
+//         this.modelo = modelo;
+//         this.bateria = bateria;
+//     }
+//     mostrarHora(){
+//         console.log('Mostrando la hora.')
+//     }
+// }
+
+// 45 a 48
+
+// class Bicicleta {
+//     constructor(marca, modelo, tamaño){
+//         this.marca = marca;
+//         this.modelo = modelo;
+//         this.tamaño = tamaño;
+//     }
+// }
+// const bici1 = new Bicicleta('aita','xxl','90')
+
+// 49 a 52
+
+// class Refrigerador {
+//     constructor(marca, modelo, capacidad){
+//         this.marca = marca;
+//         this.modelo = modelo;
+//         this.capacidad = capacidad;
+//     }
+//     enfriar(){
+//         console.log('Enfriando...')
+//     }
+// }
+
+// 53 a 
+
+// const usuario = {
+//     nombre: 'nicolas',
+//     correo: 'nico@hotmail.com',
+//     edad: 33,
+// }
+// console.log('correo' in usuario)
+// for (let propiedad in usuario){
+//     console.log(propiedad + ': ' + usuario[propiedad])
+// }

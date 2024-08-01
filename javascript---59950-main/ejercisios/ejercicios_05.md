@@ -46,7 +46,7 @@
 ## Métodos y Operaciones con Objetos
 
 23. Agrega un método llamado `buscarContacto` a la clase `Agenda` que reciba el nombre de un contacto y devuelva el objeto correspondiente.
-24. Crea una clase llamada `Vehiculo` con las propiedades `marca`, `modelo` y `año`. Agrega un método llamado `detalles` que imprima en la consola los detalles del vehículo.
+24. Crea una clase llamada `Vehiculo` con las propiedades `marca`, `modelo` y `año`. Agrega uñoñn método llamado `detalles` que imprima en la consola los detalles del vehículo.
 25. Agrega un método llamado `acelerar` a la clase `Vehiculo` que imprima en la consola un mensaje indicando que el vehículo está acelerando.
 26. Crea una clase llamada `Rectangulo` con las propiedades `base` y `altura`. Agrega un método llamado `calcularPerimetro` que calcule y devuelva el perímetro del rectángulo.
 27. Crea una clase llamada `Triangulo` con las propiedades `lado1`, `lado2` y `lado3`. Agrega un método llamado `calcularArea` que calcule y devuelva el área del triángulo.
