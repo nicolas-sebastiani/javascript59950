@@ -1,187 +1,146 @@
-// Objetos
-
-// let nombreProducto = "Azucar";
-// let precioProducto = 1000;
-// let categoriaProducto = "Almacen";
-// console.log(nombreProducto);
-// console.log(precioProducto);
-// console.log(categoriaProducto);
-
-// let nombreProducto1 = "Yerba";
-// let precioProducto1 = 1200;
-// let categoriaProducto1 = "Almacen";
-// console.log(nombreProducto1, precioProducto1, categoriaProducto1)
-
-
-// Definir Objeto Producto
-// const producto1 = {
-//     nombre: "Azucar",
-//     precio: 1000,
-//     categoria: "Almacen"
-// };
-// console.log(producto1);
-// console.log(producto1.nombre);
-// console.log(producto1.precio);
-// console.log(producto1.categoria);
-
-// const producto2 = {
-//     nombre: "Yerba",
-//     precio: 1200,
-//     categoria: "Almacen"
-// };
-// console.table(producto2);
-// console.log(producto2["nombre"]);
-// console.log(producto2["precio"]);
-// console.log(producto2["categoria"]);
-
-// producto1.categoria = "Dulces"; // Reasignacion de Valor
-// producto1.precio = 1200;
-
-// Constructores
-
-// function Producto (nombre, precio, categoria) {
-//     this.nombre = nombre;
-//     this.precio = precio;
-//     this.categoria = categoria;
+// Funciones de Orden Superior
+// function cualquiera () {
+//     console.log("Hola mundo")
 // }
 
-// const producto3 = new Producto("Azucar", 1000, "Almacen");
-// console.log(producto3);
-// const producto4 = new Producto("Yerba", 1200, "Almacen");
-// console.log(producto4);
+// cualquiera();
 
-// function Producto1 (objeto) {
-//     this.nombre = objeto.nombre;
-//     this.precio = objeto.precio;
-//     this.categoria = objeto.categoria;
+// const suma = (a, b) => {
+//     return a + b;
 // }
 
-// const producto5 = new Producto1({
-//     nombre: "Yerba",
-//     precio: 1200,
-//     categoria: "Almacen"
+// const suma = (a, b) => a + b;
+
+// console.log(suma(5, 6));
+
+
+
+// function mayorQue(numero) {
+//     return (otroNumero) => otroNumero > numero; // retorna otra funcion
+// }
+
+// let mayorQueDiez = mayorQue(10);
+
+// console.log(mayorQueDiez(12)); // Hace esta comparacio 12 > 10 ?? true
+// console.log(mayorQueDiez(2)); // Hace esta comparacio 2 > 10 ?? false
+
+
+// Otro ejemplo
+// function asignaOperacion (operacion) {
+//     if (operacion == "suma") {
+//         return (a, b) => a + b;
+//     } else if (operacion == "resta") {
+//         return (a, b) => a - b;
+//     } else {
+//         console.log("Debe ingresar suma o resta");
+//     }
+// }
+
+// const sumar = asignaOperacion("suma");
+// const restar = asignaOperacion("resta");
+
+// console.log(sumar(4, 5));
+// console.log(restar(14, 6));
+
+// Recibir funciones por parametro
+
+// const numeros = [1, 2, 3, 4, 5, 10];
+
+// function porCadaUno(array, funcion) {
+//     for (const elemento of array) {
+//         funcion(elemento);
+//     }
+// }
+
+// function potencia(n) {
+//     return console.log(n * n);
+// }
+
+// function elDobleDe(n) {
+//     return console.log(n * 2);
+// }
+// porCadaUno(numeros, console.log);
+// porCadaUno(numeros, alert);
+// porCadaUno(numeros, potencia);
+// porCadaUno(numeros, elDobleDe);
+
+// const numeros = [1, 2, 3, 4, 5, 10];
+
+// function porCadaUno(array, funcion) {
+//     for (const elemento of array) {
+//         funcion(elemento);
+//     }
+// }
+
+// const segundoArray = [];
+
+// porCadaUno(numeros, (elemento) => {
+//     segundoArray.push(elemento * 3);
 // })
 
-// console.log(producto5);
+// console.log(segundoArray);
 
-// Crear un Auto
-// function Auto(marca, color, precio, modelo, cilindraje) {
-//     this.marca = marca;
-//     this.color = color;
-//     this.precio = precio;
-//     this.modelo = modelo;
-//     this.cilindraje = cilindraje;
-// }
+///////////////////////////////////////////////////////////////
+// Metodos de busqueda y transformacion
 
-// const auto1 = new Auto("Ford", "Azul", 100000, 2024, "2.0");
-// const auto2 = new Auto("Toyota", undefined, null, 2024, "");
-// console.log(auto1);
-// console.log(auto2);
+// const numeros = [1, 2, 3, 4, 5, 10];
 
-// Diferencia entre Funciones y Metodos
-// function Auto(marca, color, precio, modelo, cilindraje) {
-//     this.marca = marca;
-//     this.color = color;
-//     this.precio = precio;
-//     this.modelo = modelo;
-//     this.cilindraje = cilindraje;
-//     this.encender = function () {
-//         console.log("El Auto esta encendido.!")
-//     }
-//     this.apagar = function () {
-//         console.log("El Auto esta apagado.!")
-//     }
-// }
-// const auto3 = new Auto("Ford", "Azul", 100000, 2024, "3.0");
-// console.log(auto3);
-// auto3.encender();
-// auto3.apagar();
+// numeros.forEach((elemento) => {
+//     console.log(elemento * elemento);
+// })
 
-// function Moto(marca, color, precio, modelo, cilindraje) {
-//     this.marca = marca;
-//     this.color = color;
-//     this.precio = precio;
-//     this.modelo = modelo;
-//     this.cilindraje = cilindraje;
-//     this.encender = function () {
-//         console.log("La Moto esta encendida.!")
-//     }
-//     this.apagar = function () {
-//         console.log("La Moto esta apagada.!")
-//     }
-// }
+// const cursos = [
+//     {nombre: "JavaScript", estado: "Finalizado"},
+//     {nombre: "React", estado: "Por Empezar"},
+//     {nombre: "Java", estado: "Por Empezar"}
+// ]
+// Metodo find
+// const resultado = cursos.find((elemento) => elemento.nombre === "JavaScript");
+// // console.log(resultado);
+// const resultadoFalso = cursos.find((elemento) => elemento.nombre === "Java");
+// // console.log(resultadoFalso);
+// const resultadoEstado = cursos.find((elemento) => elemento.estado === "Finalizado");
+// // console.log(resultadoEstado);
+// const resultadoEstadoPorEmpezar = cursos.find((elemento) => elemento.estado === "Por Empezar");
+// console.log(resultadoEstadoPorEmpezar);
 
-// const moto1 = new Moto("Toyota", "Verde", 12000, 2022, "1.0");
-// console.log(moto1)
-// moto1.encender();
-// moto1.apagar();
+// Metodo filter
+// const resultado = cursos.filter((elemento) => elemento.nombre === "JavaScript");
+// // console.log(resultado);
+// const resultadoEstadoPorEmpezar = cursos.filter((elemento) => elemento.estado === "Por Empezar");
+// // console.log(resultadoEstadoPorEmpezar);
+// const resultadoFalso = cursos.filter((elemento) => elemento.nombre === "Python");
+// console.log(resultadoFalso);
 
+// Metodo some
+// const resultado = cursos.some((elemento) => elemento.nombre === "JavaScript");
+// console.log(resultado);
+// const resultadoFalso = cursos.some((elemento) => elemento.nombre === "Python");
+// console.log(resultadoFalso);
 
-// const IVA = 1.21;
-// function Producto (nombre, precio, categoria) {
-//     this.nombre = nombre;
-//     this.precio = precio;
-//     this.categoria = categoria;
+// Metodo map
+// const cursos = [
+//     {nombre: "JavaScript", estado: "Finalizado"},
+//     {nombre: "React", estado: "Por Empezar"},
+//     {nombre: "Java", estado: "Por Empezar"}
+// ]
 
-//     this.precioFinal = function () {
-//         this.precio = precio * IVA;        
-//     } 
-// }
+// const nombres = cursos.map((elemento) => elemento.nombre);
+// console.log(nombres);
 
-// const producto10 = new Producto("Azucar", 1000, "Almacen");
-// console.log(producto10);
-// producto10.precioFinal();
+// const numeros = [1, 2, 3, 4, 5, 10];
 
+// const dobles = numeros.map(function(numero) {
+//     return numero * 2;
+// })
 
-// function Auto(marca, color, precio, modelo, cilindraje) {
-//     this.marca = marca;
-//     this.color = color;
-//     this.precio = precio;
-//     this.modelo = modelo;
-//     this.cilindraje = cilindraje;
-//     this.encender = function () {
-//         console.log("El Auto esta encendido.!")
-//     }
-//     this.apagar = function () {
-//         console.log("El Auto esta apagado.!")
-//     }
-// }
-// const auto3 = new Auto("Ford", "Azul", 100000, 2024, "3.0");
-// console.log(auto3);
-// auto3.encender();
-// auto3.apagar();
+// console.log(numeros);
+// console.log(dobles);
 
-// console.log("marca" in auto3); // true
-// console.log("nombre" in auto3);  // false
+// Metodo reduce
+// const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const resultado = numeros.reduce((acumulador, elemento) => acumulador + elemento , 0);
+// console.log(resultado);
 
-// for (const caracteristica in auto3 ) {
-//     console.log(auto3[caracteristica])
-// }
-
-
-// Clases
-class Vehiculo {
-    constructor(tipo, marca, color, precio, modelo, cilindraje) {
-        this.tipo = tipo;
-        this.marca = marca;
-        this.color = color;
-        this.precio = precio;
-        this.modelo = modelo;
-        this.cilindraje = cilindraje;
-    }
-    encender() {
-        console.log("El/La " + this.tipo + " esta encendido/a.!")
-    }
-    apagar() {
-        console.log("El/La " + this.tipo + "  esta apagado/a.!")
-    }
-}
-
-const auto = new Vehiculo("Auto", "Ford", "Azul", 100000, 2024, "3.0");
-console.log(auto);
-const moto = new Vehiculo("Moto", "Toyota", "Verde", 12000, 2022, "1.0");
-console.log(moto);
-auto.encender();
-auto.apagar();
-moto.encender();
-moto.apagar();
+// console.log(numeros.sort((a, b) => a - b));
+// console.log(numeros.sort((a, b) => b - a));

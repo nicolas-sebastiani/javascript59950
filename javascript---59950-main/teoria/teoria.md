@@ -1,134 +1,13 @@
-# Teoría de la Clase 05
+#  ¿Cuál es la diferencia real entre crear objetos usando function o usando clases? 
 
-## Funciones Recurrentes
 
-### ¿Qué es una función recurrente?
+En JavaScript, tanto las funciones constructoras (`function`) como las clases (`class`) se utilizan para crear objetos y manejar la orientación a objetos. Sin embargo, hay diferencias importantes entre ambos enfoques. Aquí se presentan las diferencias clave y las razones para elegir uno sobre el otro.
 
-Una función recurrente es una función que se llama a sí misma. Las funciones recurrentes se usan comúnmente para resolver problemas que pueden ser desglosados en subproblemas más pequeños del mismo tipo.
+### Funciones Constructoras
 
-### Ejemplo Básico
+**Sintaxis y Uso:**
 
-Un ejemplo clásico de una función recurrente es la función para calcular el factorial de un número:
-
-```javascript
-function factorial(n) {
-    if (n === 0) {
-        return 1;
-    } else {
-        return n * factorial(n - 1);
-    }
-}
-
-console.log(factorial(5)); // 120
-```
-
-En este ejemplo, la función `factorial` se llama a sí misma hasta que `n` es 0.
-
-### Componentes de una función recursiva
-
-Una función recursiva generalmente tiene dos componentes principales:
-1. **Caso base**: Es la condición que detiene la recursión. Sin un caso base, la función seguiría llamándose indefinidamente, lo que podría causar un desbordamiento de pila.
-2. **Caso recursivo**: Es la parte de la función que se llama a sí misma con un subconjunto del problema original.
-
-### Ejemplo de Suma de Números
-
-Este ejemplo muestra una función recursiva que suma los números de 1 a n.
-
-```javascript
-function suma(n) {
-    if (n <= 1) {
-        return n;
-    } else {
-        return n + suma(n - 1);
-    }
-}
-
-console.log(suma(5)); // 15 (5 + 4 + 3 + 2 + 1)
-```
-
-### Ejemplo de Secuencia de Fibonacci
-
-La secuencia de Fibonacci es una serie de números en la que cada número es la suma de los dos anteriores. Aquí hay una función recursiva para calcular el enésimo número de Fibonacci:
-
-```javascript
-function fibonacci(n) {
-    if (n <= 1) {
-        return n;
-    } else {
-        return fibonacci(n - 1) + fibonacci(n - 2);
-    }
-}
-
-console.log(fibonacci(6)); // 8 (0, 1, 1, 2, 3, 5, 8)
-```
-
-### Ejemplo de Potencia
-
-Este ejemplo muestra una función recursiva que calcula la potencia de un número.
-
-```javascript
-function potencia(base, exponente) {
-    if (exponente === 0) {
-        return 1;
-    } else {
-        return base * potencia(base, exponente - 1);
-    }
-}
-
-console.log(potencia(2, 3)); // 8 (2^3 = 2 * 2 * 2)
-```
-
-### Ejemplo de Invertir una Cadena
-
-Este ejemplo muestra una función recursiva que invierte una cadena.
-
-```javascript
-function invertirCadena(cadena) {
-    if (cadena === "") {
-        return "";
-    } else {
-        return invertirCadena(cadena.substr(1)) + cadena.charAt(0);
-    }
-}
-
-console.log(invertirCadena("hola")); // "aloh"
-```
-
-### Consideraciones al usar recursividad
-
-- **Eficiencia**: Algunas funciones recursivas pueden ser ineficientes si realizan muchos cálculos repetidos, como la función de Fibonacci que se muestra arriba. Para mejorar la eficiencia, se pueden usar técnicas como la memoización.
-- **Complejidad**: La recursividad puede hacer que el código sea más difícil de entender y depurar. Es importante asegurarse de que el caso base esté correctamente definido para evitar bucles infinitos.
-- **Profundidad de la pila**: Las funciones recursivas utilizan la pila de llamadas. Si la recursión es demasiado profunda, puede causar un desbordamiento de pila. Las iteraciones a menudo pueden ser una alternativa más segura para problemas que requieren muchas llamadas recursivas.
-
----
-
-## Objetos, Clases, Constructores y `this`
-
-### ¿Qué es un objeto?
-
-En JavaScript, un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o clave) y un valor. Los valores de las propiedades pueden ser valores primitivos, objetos u otras funciones.
-
-### Ejemplo Básico
-
-```javascript
-const persona = {
-    nombre: 'Ana',
-    edad: 30,
-    saludar: function() {
-        console.log('Hola, mi nombre es ' + this.nombre);
-    }
-};
-
-persona.saludar(); // Hola, mi nombre es Ana
-```
-
-En este ejemplo, `persona` es un objeto con propiedades `nombre`, `edad` y un método `saludar`.
-
-### ¿Qué es un constructor?
-
-En JavaScript, un constructor es una función especial que se utiliza para crear y inicializar objetos cuando se utiliza con la palabra clave `new`.
-
-### Ejemplo Básico de Constructor
+Las funciones constructoras son funciones regulares que se utilizan para crear objetos. Se les suele poner un nombre con mayúscula inicial para diferenciarlas de las funciones normales.
 
 ```javascript
 function Persona(nombre, edad) {
@@ -136,18 +15,24 @@ function Persona(nombre, edad) {
     this.edad = edad;
 }
 
-const persona1 = new Persona('Juan', 25);
-console.log(persona1.nombre); // Juan
-console.log(persona1.edad);  // 25
+Persona.prototype.saludar = function() {
+    console.log(`Hola, me llamo ${this.nombre} y tengo ${this.edad} años.`);
+};
+
+const persona1 = new Persona('Alejandro', 30);
+persona1.saludar(); // "Hola, me llamo Alejandro y tengo 30 años."
 ```
 
-En este ejemplo, `Persona` es un constructor que inicializa los objetos con propiedades `nombre` y `edad`.
+**Características:**
 
-### ¿Qué es una clase?
+1. **Prototipo:** Las funciones constructoras utilizan prototipos para compartir métodos entre instancias.
+2. **Herencia:** La herencia se logra mediante la manipulación del prototipo, lo cual puede ser más complejo que con clases.
 
-En JavaScript, una clase es una plantilla para crear objetos. Una clase encapsula datos y funciones que operan sobre esos datos en una sola entidad.
+### Clases
 
-### Ejemplo Básico de Clase
+**Sintaxis y Uso:**
+
+Las clases fueron introducidas en ECMAScript 6 (ES6) y proporcionan una sintaxis más clara y moderna para la creación de objetos y la herencia.
 
 ```javascript
 class Persona {
@@ -157,133 +42,216 @@ class Persona {
     }
 
     saludar() {
-        console.log('Hola, mi nombre es ' + this.nombre);
+        console.log(`Hola, me llamo ${this.nombre} y tengo ${this.edad} años.`);
     }
 }
 
-const persona1 = new Persona('Carlos', 28);
-persona1.saludar(); // Hola, mi nombre es Carlos
+const persona1 = new Persona('Alejandro', 30);
+persona1.saludar(); // "Hola, me llamo Alejandro y tengo 30 años."
 ```
 
-En este ejemplo, `Persona` es una clase con un constructor y un método `saludar`.
+**Características:**
 
-### Uso de `this`
+1. **Sintaxis Clara:** La sintaxis de las clases es más clara y concisa que la de las funciones constructoras, lo que mejora la legibilidad del código.
+2. **Métodos estáticos:** Las clases permiten definir métodos estáticos que no están vinculados a instancias particulares.
+3. **Herencia:** La herencia en clases es más simple y directa usando las palabras clave `extends` y `super`.
 
-En JavaScript, `this` es una palabra clave que se refiere al objeto actual en el contexto de ejecución. En una función de objeto, `this` se refiere al objeto al que pertenece la función.
+### Diferencias y Comparaciones
 
-#### Ejemplo Básico de `this`
+1. **Claridad y Sintaxis:**
+   - **Clases:** Proporcionan una sintaxis más clara y estructurada para definir objetos y herencia.
+   - **Funciones Constructoras:** Pueden ser más verbosas y menos intuitivas, especialmente para desarrolladores que provienen de otros lenguajes orientados a objetos.
+
+2. **Herencia:**
+   - **Clases:** Facilitan la herencia con una sintaxis sencilla (`extends` y `super`).
+   - **Funciones Constructoras:** La herencia requiere manipulación explícita del prototipo, lo que puede ser más complicado y propenso a errores.
+
+3. **Métodos y Propiedades:**
+   - **Clases:** Los métodos definidos dentro de la clase son no-enumerables, lo que significa que no aparecerán en bucles `for...in`.
+   - **Funciones Constructoras:** Los métodos definidos en el prototipo son enumerables, lo que significa que aparecerán en bucles `for...in`.
+
+4. **Compatibilidad:**
+   - **Funciones Constructoras:** Son compatibles con todas las versiones de JavaScript.
+   - **Clases:** Requieren ES6, por lo que en entornos muy antiguos podrían no estar disponibles sin un transpilador como Babel.
+
+### ¿Cuál Usar?
+
+- **Usar Clases:**
+  - Cuando se busca una sintaxis más moderna, clara y similar a otros lenguajes orientados a objetos.
+  - Para aprovechar la herencia simplificada y los métodos estáticos.
+
+- **Usar Funciones Constructoras:**
+  - En entornos donde ES6 no está disponible o no se puede usar.
+  - Cuando se necesita compatibilidad con código y bibliotecas antiguas.
+
+En resumen, las clases en JavaScript ofrecen una forma más moderna y clara de trabajar con la orientación a objetos, mientras que las funciones constructoras proporcionan una solución más antigua y compatible con versiones anteriores del lenguaje.
+
+
+----
+
+
+----
+
+<br><br>
+
+
+# Funciones de Orden Superior en JavaScript
+
+Una **función de orden superior** es una función que puede recibir otras funciones como argumentos o que puede retornar una función. Estas funciones son fundamentales en JavaScript y en la programación funcional, ya que permiten un estilo de programación más declarativo y conciso.
+
+#### Características de las Funciones de Orden Superior
+
+1. **Reciben funciones como argumentos**: Pueden tomar una o más funciones como parámetros.
+2. **Retornan funciones**: Pueden devolver una nueva función como resultado.
+
+### Ejemplos de Funciones de Orden Superior
+
+1. **`map`**:
+   - **Descripción**: Crea un nuevo array con los resultados de aplicar una función a cada elemento del array original.
+   - **Ejemplo**:
+
+     ```javascript
+     const numbers = [1, 2, 3, 4, 5];
+     const doubled = numbers.map(function(number) {
+       return number * 2;
+     });
+
+     console.log(doubled); // [2, 4, 6, 8, 10]
+     ```
+
+2. **`filter`**:
+   - **Descripción**: Crea un nuevo array con todos los elementos que pasen la prueba implementada por la función dada.
+   - **Ejemplo**:
+
+     ```javascript
+     const numbers = [1, 2, 3, 4, 5];
+     const even = numbers.filter(function(number) {
+       return number % 2 === 0;
+     });
+
+     console.log(even); // [2, 4]
+     ```
+
+3. **`reduce`**:
+   - **Descripción**: Aplica una función a un acumulador y a cada valor de un array (de izquierda a derecha) para reducirlo a un único valor.
+   - **Ejemplo**:
+
+     ```javascript
+     const numbers = [1, 2, 3, 4, 5];
+     const sum = numbers.reduce(function(total, number) {
+       return total + number;
+     }, 0);
+
+     console.log(sum); // 15
+     ```
+
+4. **`forEach`**:
+   - **Descripción**: Ejecuta una función dada una vez por cada elemento del array.
+   - **Ejemplo**:
+
+     ```javascript
+     const numbers = [1, 2, 3, 4, 5];
+     numbers.forEach(function(number) {
+       console.log(number);
+     });
+
+     // Output:
+     // 1
+     // 2
+     // 3
+     // 4
+     // 5
+     ```
+
+5. **`sort`**:
+   - **Descripción**: Ordena los elementos de un array in situ y devuelve el array.
+   - **Ejemplo**:
+
+     ```javascript
+     const numbers = [5, 3, 8, 1, 2];
+     numbers.sort(function(a, b) {
+       return a - b; // Orden ascendente
+     });
+
+     console.log(numbers); // [1, 2, 3, 5, 8]
+     ```
+
+El método `sort` se utiliza para ordenar los elementos de un array. De manera predeterminada, el método `sort` convierte los elementos a cadenas y los ordena según su valor Unicode, lo cual puede no ser útil para ordenar números. Por eso, generalmente, se le pasa una función de comparación que define el criterio de ordenación.
+
+### Función de comparación
+
+La función de comparación recibe dos argumentos (digamos `a` y `b`) y debe devolver un valor numérico que determina el orden relativo de `a` y `b`:
+- Si la función devuelve un valor **negativo**, `a` se ordena antes que `b`.
+- Si la función devuelve **cero**, `a` y `b` se consideran iguales en términos de orden.
+- Si la función devuelve un valor **positivo**, `a` se ordena después que `b`.
+
+### Ejemplos
+
+#### Orden ascendente `(a, b) => a - b`
+```javascript
+numeros.sort((a, b) => a - b);
+```
+Aquí, `a` y `b` son dos elementos del array. La expresión `a - b` devolverá:
+- Un número negativo si `a` es menor que `b` (por lo tanto, `a` debe venir antes que `b`).
+- Cero si `a` es igual a `b`.
+- Un número positivo si `a` es mayor que `b` (por lo tanto, `a` debe venir después de `b`).
+
+Por ejemplo:
+- Para `a = 3` y `b = 5`, `a - b` es `-2`, por lo que `3` se ordena antes que `5`.
+- Para `a = 7` y `b = 2`, `a - b` es `5`, por lo que `7` se ordena después que `2`.
+
+Esto hace que el array se ordene de menor a mayor.
+
+#### Orden descendente `(a, b) => b - a`
+```javascript
+numeros.sort((a, b) => b - a);
+```
+Aquí, la expresión `b - a` devolverá:
+- Un número negativo si `b` es menor que `a` (por lo tanto, `b` debe venir antes que `a`).
+- Cero si `b` es igual a `a`.
+- Un número positivo si `b` es mayor que `a` (por lo tanto, `b` debe venir después de `a`).
+
+Por ejemplo:
+- Para `a = 3` y `b = 5`, `b - a` es `2`, por lo que `5` se ordena antes que `3`.
+- Para `a = 7` y `b = 2`, `b - a` es `-5`, por lo que `2` se ordena después que `7`.
+
+Esto hace que el array se ordene de mayor a menor.
+
+### Ejemplo en código
 
 ```javascript
-const persona = {
-    nombre: 'Lucía',
-    edad: 32,
-    saludar: function() {
-        console.log('Hola, mi nombre es ' + this.nombre);
-    }
-};
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-persona.saludar(); // Hola, mi nombre es Lucía
+console.log(numeros.sort((a, b) => a - b)); // Orden ascendente: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(numeros.sort((a, b) => b - a)); // Orden descendente: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 ```
 
-### Recorrer un Objeto con `for...in`
+En resumen, `(a, b) => a - b` ordena los números de menor a mayor, y `(a, b) => b - a` ordena los números de mayor a menor.
 
-#### ¿Qué es `for...in`?
+### Ejemplo Adicional: Función que Retorna Otra Función
 
-El bucle `for...in` itera sobre todas las propiedades enumerables de un objeto.
-
-#### Ejemplo Básico
+Una función de orden superior también puede retornar otra función.
 
 ```javascript
-const persona = {
-    nombre: 'Lucía',
-    edad: 32,
-    profesion: 'Ingeniera'
-};
-
-for (let propiedad in persona) {
-    console.log(propiedad + ': ' + persona[propiedad]);
+function createMultiplier(multiplier) {
+  return function(number) {
+    return number * multiplier;
+  };
 }
 
-// nombre: Lucía
-// edad: 32
-// profesion: Ingeniera
+const double = createMultiplier(2);
+const triple = createMultiplier(3);
+
+console.log(double(5)); // 10
+console.log(triple(5)); // 15
 ```
 
-En este ejemplo, el bucle `for...in` recorre todas las propiedades del objeto `persona` y las imprime.
+### Conclusión
 
-### Uso de `in` en Objetos
+Las funciones de orden superior son una herramienta poderosa en JavaScript. Permiten escribir código más limpio, reutilizable y declarativo. Al entender y utilizar estas funciones, tus alumnos podrán manejar mejor la manipulación de arrays y otros datos de manera eficiente.
 
-El operador `in` se utiliza para verificar si una propiedad existe en un objeto.
 
-#### Ejemplo Básico
 
-```javascript
-const persona = {
-    nombre: 'Mario',
-    edad: 40
-};
-
-console.log('nombre' in persona); // true
-console.log('profesion' in persona); // false
-```
-
-En este ejemplo, el operador `in` verifica si las propiedades `nombre` y `profesion` existen en el objeto `persona`.
-
-## Ejemplos Prácticos
-
-### Crear un Objeto Usando un Constructor
-
-```javascript
-function Animal(tipo, sonido) {
-    this.tipo = tipo;
-    this.sonido = sonido;
-}
-
-const perro = new Animal('Perro', 'Ladrido');
-console.log(perro.tipo); // Perro
-console.log(perro.sonido); // Ladrido
-```
-
-### Definir Métodos en una Clase
-
-```javascript
-class Coche {
-    constructor(marca, modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
-    }
-
-    arrancar() {
-        console.log(this.marca + ' ' + this.modelo + ' está arrancando.');
-    }
-}
-
-const miCoche = new Coche('Toyota', 'Corolla');
-miCoche.arrancar(); // Toyota Corolla está arrancando.
-```
-
-### Herencia en Clases
-
-```javascript
-class Animal {
-    constructor(nombre) {
-        this.nombre = nombre;
-    }
-
-    hacerSonido() {
-        console.log(this.nombre + ' hace un sonido.');
-    }
-}
-
-class Perro extends Animal {
-    hacerSonido() {
-        console.log(this.nombre + ' ladra.');
-    }
-}
-
-const miPerro = new Perro('Rex');
-miPerro.hacerSonido(); // Rex ladra.
-```
 
 ---
 
