@@ -402,7 +402,7 @@
 //     }
 // }
 
-// 53 a 
+// 53 a 56
 
 // const usuario = {
 //     nombre: 'nicolas',
@@ -413,3 +413,28 @@
 // for (let propiedad in usuario){
 //     console.log(propiedad + ': ' + usuario[propiedad])
 // }
+
+// const carro = {
+//     marca: 'ford',
+//     modelo: 'fiesta',
+//     año: 2003,
+// }
+// console.log('año' in carro)
+// for (let propiedad in carro){
+//     console.log(propiedad + ': ' + carro[propiedad])
+// }
+
+// 57 a 60
+
+// class Drone {
+//     constructor(marca, modelo, bateria){
+//         this.marca = marca;
+//         this.modelo = modelo;
+//         this.bateria = bateria;
+//     }
+//     volar(){
+//         console.log('El dron esta volando.')
+//     }
+// }
+// const drone1 = new Drone ('aiwa', '1009', 6000)
+// drone1.volar()
