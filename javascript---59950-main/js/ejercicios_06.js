@@ -71,8 +71,8 @@
 //     agregarPersona(Persona){
 //         this.personas.push(Persona)
 //     }
-//     eliminarPersona(nombreBuscado){
-//         this.personas = this.personas.filter((elemento) => elemento.nombre !== nombreBuscado)
+//      eliminarPersona(nombreBuscado){
+//          this.personas = this.personas.filter((elemento) => elemento.nombre !== nombreBuscado)
 //     }
 //     encontrarPersona(nombreBuscado){
 //         return this.personas.find((persona) => persona.nombre === nombreBuscado)
@@ -170,3 +170,138 @@
 // console.log(consecionario1.coches)
 // consecionario1.totalDeCoches()
 // consecionario1.ordenarPorAño()
+
+// 31 a 40
+
+// class Estudiante {
+//     constructor(nombre, nota1, nota2, nota3){
+//         this.nombre = nombre;
+//         this.nota1 = nota1;
+//         this.nota2 = nota2;
+//         this.nota3 = nota3;
+//     }
+//     calcularPromedio(){
+//         const sumaNotas = this.nota1 + this.nota2 + this.nota3;
+//         const promedio = sumaNotas / 3;
+//         return promedio;
+//     }
+//     aprueba(){
+//         const promedio = this.calcularPromedio();
+//         return promedio >= 6;
+//     }
+// }
+
+// class Curso{
+//     constructor(){
+//         this.estudiantes = []
+//     }
+//     agregarEstudiante(Estudiante){
+//         this.estudiantes.push(Estudiante)
+//     }
+//     eliminarEstudiante(nombreBuscado){
+//         this.estudiantes = this.estudiantes.filter((elemento) => elemento.nombre !== nombreBuscado)
+//     }
+//     buscarEstudiante(nombreBuscado){
+//         return this.estudiantes.find((elemento) => elemento.nombre === nombreBuscado)
+//     }
+//     obtenerEstudiantesAprobados(){
+//         return this.estudiantes.filter((estudiante) => estudiante.aprueba());
+//     }
+// }
+
+// console.log(`El promedio es ${alumno1.notaPromedio().toFixed(1)}`)
+// const alumno1 = new Estudiante('nico', 2, 4, 2)
+// const alumno2 = new Estudiante('barby', 9, 7, 9)
+// const alumno3 = new Estudiante('jose', 10, 1, 9)
+// alumno2.notaPromedio()
+// alumno1.aprueba()
+// const curso1 = new Curso()
+// curso1.agregarEstudiante(alumno1)
+// curso1.agregarEstudiante(alumno2)
+// curso1.agregarEstudiante(alumno3)
+// curso1.eliminarEstudiante('nico')
+// console.log(curso1.estudiantes)
+// const personaEncontrada = curso1.buscarEstudiante('nico')
+// if (personaEncontrada){
+//     console.log('Se encontro al alumno buscado')
+// } else {
+//     console.log('No se encontro el alumno')
+// }
+// const alumnosAprobados = curso1.estudiantesAprobados();
+// console.log('Estudiantes aprobados: ');
+// alumnosAprobados.forEach((estudiante) => {console.log(`${estudiante.nombre}: Promedio: ${estudiante.aprueba()}`)});
+
+// const estudiantesAprobados = curso1.obtenerEstudiantesAprobados();
+// console.log('Estudiantes aprobados: ');
+// estudiantesAprobados.forEach((estudiante) => {console.log(`${estudiante.nombre} - Promedio: ${estudiante.calcularPromedio()}`);
+// })
+
+// 41 a 
+
+// const numeros = [2, 4, 6, 12, 16, 1, 3, 25]
+// let suma = 0
+// for (elemento of numeros){
+//     suma += elemento
+// }
+// console.log(suma)
+
+// let numeroMayor = numeros[0]
+// for(let i = 1; i < numeros.length; i++){
+//     if(numeros[i] > numeroMayor){
+//         numeroMayor = numeros[i]
+//     }
+// }
+// console.log(numeroMayor)
+
+// const numeros = [2, 4, 6, 12, 16, 1, 3, 25, 11, 29]
+// let contadorNumeros = 0
+// for(let i = 1; i < numeros.length; i++){
+//     if (numeros[i] > 10){
+//         contadorNumeros++
+//     }
+// }
+// console.log(contadorNumeros)
+
+// const numeros = [2, 4, 6, 12, 16, 1, 3, 25, 11, 29]
+// let resultado = 0
+// let numero = 0
+// for(let i = 0; i < numeros.length; i++){
+//     numero = numeros[i]
+//     resultado = numero * 2
+//     console.log(`${numeros[i]} x 2 es ${resultado}`)
+// }
+
+// const numeros = [3, 4, 6, 12, 16, 1, 3, 25, 11, 29]
+// const numerosPares = []
+// let numeroPar = numeros[0]
+// for(let i = 1; i < numeros.length; i++){
+//     numeroPar = numeros[i]
+//     if (numeroPar % 2 === 0){
+//         numerosPares.push(numeroPar)
+//     }
+// }
+// console.log(numeros)
+// console.log(numerosPares)
+
+// const numeros = [3, 4, 6, 12, 16, 1, 3, 25, 11, 29];
+// let promedio = 0;
+// let sumatoria = 0;
+// let numero = numeros[0]
+// for(let i = 0; i < numeros.length; i++){
+//     numero = numeros[i]
+//     sumatoria += numero
+// }
+// promedio = sumatoria / numeros.length
+// console.log(promedio)
+
+// const numeros = [3, 4, 6, 12, 16, 1, 3, 25, 11, 29];
+// let numeroPar = numeros[0];
+// let sumatoria = 0;
+// let numero = 0;
+// for(let i = 0; i < numeros.length; i++){
+//     numeroPar = numeros[i]
+//     if (numeroPar % 2 === 0){
+//         sumatoria += numeroPar 
+//     }
+// }
+// console.log(sumatoria)
