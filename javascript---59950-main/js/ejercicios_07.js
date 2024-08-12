@@ -1,6 +1,6 @@
 // 1 a 
 
-const numeros = [3 ,6 , 35, 1, 22, 19, 13, 59, 93, 60, 10]
+// const numeros = [3 ,6 , 35, 1, 22, 19, 13, 59, 93, 60, 10]
 
 // numeros.forEach((numero) => console.log(numero));
 
@@ -40,4 +40,3 @@ const numeros = [3 ,6 , 35, 1, 22, 19, 13, 59, 93, 60, 10]
 // console.log(tempCelc)
 // const tempFaren = tempCelc.map((temperatura) => temperatura * 1.8 + 32)
 // console.log(tempFaren)
-
